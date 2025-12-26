@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>This Exists Because of You</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="full-bg"></div>
+
+    <div class="container">
+
+        <section class="intro fade">
+            <p class="small">ONE YEAR</p>
+            <h1>This exists because of you.</h1>
+            <p class="small">— Our First Anniversary</p>
+        </section>
+
+        <section class="image-block fade">
+            <img src="{{ url_for('static', filename='images/first.jpeg') }}">
+            <div class="caption">
+                This was our first time together in person after our confession.
+                I still remember how nervous and excited we both were — every glance and laugh is etched in my heart
+                forever.
+            </div>
+        </section>
+
+        <section class="image-block fade">
+            <img src="{{ url_for('static', filename='images/second.jpeg') }}">
+            <div class="caption">
+                One of our only meets throughout the year — a random, unexpected moment that made everything feel like
+                home.
+                Even short times together with you are my favorite memories.
+            </div>
+        </section>
+        <!-- Hidden secret trigger -->
+        <div id="secret-trigger" title="Click if you know"
+            style="position:fixed; bottom:20px; right:20px; cursor:pointer; font-size:1.2rem; color:#fff; opacity:0.2;">
+            💖
+        </div>
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

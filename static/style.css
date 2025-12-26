@@ -1,0 +1,231 @@
+/* ===== Reset ===== */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Georgia', serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ===== Full-page starry background with pulse ===== */
+.full-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/images/stars.jpg') center center / cover no-repeat;
+    z-index: -1;
+    animation: bgPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulse {
+    0% {
+        filter: brightness(0.5);
+    }
+
+    50% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(0.75);
+    }
+}
+
+/* ===== Container for content ===== */
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+/* ===== Fade-in effect ===== */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Images ===== */
+.image-block {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.image-block img {
+    width: 85%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.92;
+    transition: transform 0.6s ease, box-shadow 0.6s ease, opacity 0.6s ease;
+}
+
+.image-block img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Caption ===== */
+.caption {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 14px;
+}
+
+/* Secret page body */
+body.secret {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background layer with prominent pulse */
+.starry-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/images/stars.jpg') center center / cover no-repeat;
+    z-index: -2;
+    animation: bgPulse 12s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulse {
+    0% {
+        filter: brightness(0.6);
+    }
+
+    50% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(0.6);
+    }
+}
+
+/* Container for text and image */
+.starry-container {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    padding: 60px 20px;
+    margin: auto;
+    z-index: 1;
+}
+
+/* Secret image: static */
+.starry-container img {
+    display: block;
+    margin: 40px auto;
+    max-width: 80%;
+    border-radius: 18px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Secret page text */
+.starry-container p {
+    line-height: 1.6;
+    font-size: 1.05rem;
+    margin: 25px 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.starry-container .quote {
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: #ffefc2;
+}
+
+/* ===== Login page ===== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.login-box {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 18px;
+    padding: 50px 40px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    color: #fff;
+    backdrop-filter: blur(6px);
+}
+
+.login-box h1 {
+    font-family: 'Georgia', serif;
+    font-weight: normal;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.login-box .small {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.login-box input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #777;
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.login-box input:focus {
+    border-color: #aaa;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.login-box button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #aaa;
+    color: #fff;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+}
+
+.hidden-note {
+    font-size: 0.8rem;
+    color: #bbb;
+    margin-top: 25px;
+}
